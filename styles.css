@@ -34,6 +34,8 @@ a:visited{
 /* Navigation Bar */
 .navbar {
     display: flex;
+    position: sticky;
+    top:0;
     justify-content: space-around;
     align-items: center;
     padding: 20px 50px;
@@ -259,6 +261,53 @@ a:visited{
     font-size: 1.5rem;
     list-style: none;
 }
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    flex: 1 1 calc(33.333% - 40px); /* 3 cards in a row, adjusting for gaps */
+    background: #000000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 300px; /* Ensuring uniform card size */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.project-card p {
+    font-size: 1em;
+    color: #f7f7f7;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .project-card {
+        flex: 1 1 calc(50% - 40px); /* 2 cards in a row */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-card {
+        flex: 1 1 100%; /* 1 card per row */
+    }
+}
 
 /* Responsive Design */
 @media screen and (max-width: 650px) {
@@ -304,6 +353,8 @@ a:visited{
 
    
     .navbar {
+        position: sticky;
+        top: 0;
         padding: 20px;
         justify-content: space-between;
     }

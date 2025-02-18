@@ -9,31 +9,20 @@
 </head>
 
 <body>
+    <!-- Fixed Navbar -->
+    <nav class="navbar">
+        <div class="logo">Rajat's Portfolio</div>
+        <ul class="menu-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
     <div class="container home-section" id="home">
-        <nav class="navbar">
-            <div class="logo">Rajat's Portfolio</div>
-            <div class="menu">
-                <ul class="menu-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <button class="fas fa-list text-green-500" id="menu-btn"></button>
-        </nav>
-
-        <div class="diabox">
-            <ul id="menuList">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#works">Works</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-
         <div class="hero-section">
             <div>
                 <h1>Hey!</h1>
@@ -70,34 +59,64 @@
     </div>
     
 
+
     <!-- Skills Section -->
     <div class="container skills-section" id="skills">
         <h2 class="section-header">Skills</h2>
         <div class="content">
-        
-                <section>
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Tools</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>VS Code</li>
-                    </ul>
-                </section>
-            
+            <section>
+                <h3>Languages</h3>
+                <ul>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Tools</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>VS Code</li>
+                </ul>
+            </section>
         </div>
     </div>
 
-   
-
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-header">Projects</h2>
+            <div class="project-grid">
+                
+                
+                <div class="project-card">
+                    <a href="https://github.com/rajatsinghten/SecureOps"><img src="proj1.png" alt="SecureOps" ></a>
+                    <h3>SecureOps - Website Protection Extension</h3>
+                    <p>A Chrome extension that locks websites using a master password with rate-limiting for failed attempts. It ensures web security by preventing unauthorized access.</p>
+                </div>
+    
+              
+                <div class="project-card">
+                    <a href="https://github.com/rajatsinghten/LabEve"><img src="proj2.png" alt="Automated Entry-Exit System"></a>
+                    <h3>Automated Entry & Exit System</h3>
+                    <p>An RFID-based system that tracks lab entry and exit, updating real-time student status using Firebase. Displays live attendance on a web app.</p>
+                </div>
+    
+               
+    
+                
+                <div class="project-card">
+                    <a href="https://github.com/rajatsinghten/PuroAqua"><img src="proj3.png" alt="Water Quality Testing Kit"></a>
+                    <h3>AI-Powered Water Quality Testing Kit</h3>
+                    <p>A Raspberry Pi-based system that tests water for silver ions, chlorine, and bacteria. Uses AWS DynamoDB for real-time data logging and alerting.</p>
+                </div>
+    
+                
+            </div>
+        </div>
+    </section>
+    
     <!-- Contact Section -->
     <div class="container contact-section" id="contact">
         <h2 class="section-header">Contact</h2>
@@ -105,15 +124,11 @@
             <p>Feel free to reach out:</p>
             <ul>
                 <li>Email : rajatkumar_singh@srmap.edu.in</li>
-                <li>
-                    LinkedIn :
-                    <a target="_blank" href="www.linkedin.com/in/rajatsingh10">Rajat's LinkedIn</a>
-                </li>
+                <li>LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/rajatsingh10/">Rajat's LinkedIn</a></li>
             </ul>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
