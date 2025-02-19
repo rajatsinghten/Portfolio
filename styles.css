@@ -58,22 +58,44 @@ a {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
-
-/* Mobile Menu List */
-#menuList {
+.hamburger{
     display: none;
-    position: fixed;
+}
+.close{
+    display: none;
+}
+#menuList {
+    list-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    position: absolute;
+    width: 100px;
     right: 30px;
-    top: 80px;
+    top: 50px;
+    padding: 10px 20px;
+    z-index: 1;
+    display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    min-width: 200px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 10px;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    background-color: black;
+    border: 1px solid white;
+}
+
+#menuList li a:link {
+    text-decoration: none;
+    color: white;
+}
+
+#menuList li a:visited {
+    color: white;
+}
+#menu-btn {
+
+        background-color: white;  /* First declaration */
+        background-color: black;  /* Second declaration */
+    
+    
 }
 
 /* Hero Section */
@@ -171,7 +193,6 @@ a {
     justify-content: center; 
     max-width: 1200px; 
     margin: 0 auto; 
-    height: 80vh;
 }
 
 .skills-section section {
@@ -263,16 +284,23 @@ a {
 
 /* Responsive Design */
 @media (max-width: 1144px) {
+
     .hero-section {
         flex-direction: column-reverse;
-        padding: 50px 20px;
+        padding: 20px 20px;
         gap: 40px;
         text-align: center;
     }
+    .hamburger{
+        display: none;
+    }
+    .close{
+        display: none;
+    }
 
     .profile-picture img {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
 
     .about-section .content {
@@ -282,7 +310,7 @@ a {
 
     .about-section .about-text {
         width: 90%;
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 }
 
@@ -315,18 +343,40 @@ a {
     border: 0;
 }
 @media (max-width: 768px) {
-    .navbar {
-        padding: 15px 20px;
+    .menu-list {
+        display:inline-block;
+        flex-direction: column;
+        position: absolute;
+        transition: all 1s;
+        right: -120%;
+        opacity: 1;
+        top: 0px;
+        background-color: black;
+        width: 200px;
+        height: auto;
+        text-align: right;
+        padding: 5px;
+        border-radius: 60px;
     }
 
+    .hamburger{
+        display: block;
+        height: 30px;
+        cursor: pointer;
+    }
+    .close{
+        display: block;
+        height: 30px;
+        cursor: pointer;
+    }
     .logo {
         font-size: 1.5rem;
     }
 
-    .menu-list {
+    /*.menu-list {
         font-size: 1.2rem;
         gap: 15px;
-    }
+    }*/
 
     .section-header {
         font-size: 2rem;
@@ -339,13 +389,40 @@ a {
 }
 
 @media (max-width: 650px) {
-    .menu-list {
+    #menu-btn {
         display: none;
     }
 
-    #menuList {
-        right: 20px;
-        top: 70px;
+    .hamburger{
+        display: block;
+        height:30px;
+        cursor: pointer;
+    }
+    .close{
+        display: block;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .menu-list {
+        display:inline-block;
+        /*flex-direction: column;*/
+        position: absolute;
+        z-index: 1;
+        opacity: 1;
+        transition: all 1s;
+        top: 0px;
+        right: -120%;
+        background-color: black;
+        width: 200px;
+        height: auto;
+        text-align: right;
+        padding: 5px;
+        border-radius: 60px;
+    }
+
+    .menu-list.show {
+        display: flex;
     }
 
     .hero-section {

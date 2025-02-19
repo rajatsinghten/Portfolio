@@ -1,20 +1,16 @@
-// Updated IDs based on the new HTML structure
-const menuBtn = document.getElementById('menu-btn'); // Updated ID for the menu button
-const menuList = document.getElementById('menuList'); // Menu list ID remains the same
-
-// Toggle the display of the menu list when the menu button is clicked
-menuBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // Prevent click event from propagating to the document
-    if (menuList.style.display === 'none' || menuList.style.display === '') {
-        menuList.style.display = 'flex';
-    } else {
-        menuList.style.display = 'none';
-    }
+document.addEventListener("DOMContentLoaded", function() {
+    const menuBtn = document.getElementById("menu-btn");
+    const menuList = document.querySelector(".menu-list");
+    
+    menuBtn.addEventListener("click", function() {
+        menuList.classList.toggle("show");
+    });
 });
 
-// Close the menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!menuBtn.contains(e.target) && !menuList.contains(e.target)) {
-        menuList.style.display = 'none'; // Hide the menu
-    }
-});
+document.querySelector(".hamburger").addEventListener("click", ()=>{
+    document.querySelector(".menu-list").style.right = 0;
+})
+
+document.querySelector(".close").addEventListener("click", ()=>{
+    document.querySelector(".menu-list").style.right = "-120%";
+})
